@@ -1,0 +1,220 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: linear-gradient(blue,pink,brown,lightgreen);
+    margin: 0;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.header{
+    margin: 0;
+    top: 0;
+    position: sticky;
+    box-shadow: 5px 1px 5px 0 orange;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    width: 100vw;
+}
+/* Styling Navigation  */
+nav{
+    background: #031829;
+    line-height: 20px;
+    margin: 0;
+    width: 100%;
+   
+}
+/*Styling List */
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin:0 5px;
+    padding: 0;
+}
+/*Styling Navigation links with anchor tags*/
+.header nav ul a{
+    display: flex;
+    text-decoration: none;
+    padding: 10px;
+    text-transform: uppercase;
+    color: white;
+    
+}
+/* Styling navigation links when moving cursor over it*/
+.header ul li a:hover{
+    color: rgba(241, 245, 10, 0.959);
+    transition: .5s;
+
+}
+#more{
+    display: none;
+}
+#getmore{
+    display: none;
+}
+button{
+    background-color: rgb(48, 6, 233);
+    margin-left: 50%;
+    font-size: 3rem;
+    color: white;
+}
+span li {
+    padding-left: 5%;
+}
+.footer_nav{
+    color: white;
+    display: flex;
+    text-align:center;
+    align-items: stretch;
+    justify-content: space-around;
+    justify-items:flex-start;
+}.footer_nav ul li{
+list-style: none;
+}
+footer li a{
+    text-decoration: none;
+    color: #CCCCFF;
+}
+a:active{
+    color: rgba(241, 245, 10, 0.959);
+}
+.myFavorites{
+    display: flex;
+}
+.Video{
+    box-shadow: 2px 2px 2px 2px #1e3;
+    width: 100%;
+    height: auto;
+    margin-left: 10%;
+    order: 1;
+}
+.Video ol li video{
+    padding-left: 5%;
+    padding-bottom: 5%;
+    width: 90%;
+    height: auto;
+}
+.Audio{
+    width: 80%;
+    height: 50%;
+    margin-top: 10%;
+    margin-left: 10%;
+    position: relative;
+    overflow: auto;
+    box-shadow: 2px 2px 2px 2px #2080ee;
+    order: 2;
+}
+.Audio ol li {
+    width: 80%;
+    padding-left: 5%;
+    padding-right: 5%;
+    height: auto;
+}
+.fashion,.food,.ListOfBooks,.sports{
+    margin-top: 10%;
+    margin-left: 10%;
+}
+.fashion>ul>li,.food>ul>li,.ListOfBook>ol>li,.sports>ul>li{
+    padding-left: 5%;
+}
+.ListOfBooks{
+    
+    order: 3;
+
+}
+.sports{
+    order: 5;
+}
+.food{
+    
+     order: 4;
+}
+.fashion{
+  order: 6;
+}
+footer{
+    background-color: #0D3759;
+    position: relative;
+    width: 100%;
+    margin-top: 3%;
+}
+footer>h1{
+    text-align: center;
+    color: white;
+}
+.footer_nav{
+    color: white;
+    display: flex;
+    text-align:center;
+}
+footer li a{
+    text-decoration: none;
+    color: #CCCCFF;
+}
+footer ul li a:hover{
+    color: rgba(241, 245, 10, 0.959);
+
+}
+footer ul li a:active{
+    color: rgba(241, 245, 10, 0.959);
+
+}
+footer ul li a:visited{
+    background-color: white;
+
+}
+
+@media only screen and (max-width:678px){
+    .myFavorites{
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+@media only screen and (min-width:679px) and (max-width:999px){
+    body{
+        box-sizing: border-box;
+    }
+    .myFavorites{
+        display: flex;
+        flex-wrap:wrap;
+
+    }
+    .Video{
+        width: 30%;
+        margin-right: 0;
+        order: 1;
+    }
+    .Audio{
+        width: 30%;
+        margin-top: 0;
+    }
+    .fashion,.food,.ListOfBooks,.sports{
+        width: 40%;
+        
+    }
+}
+@media only screen and (min-width:1000px){
+    .myFavorites{
+        display: flex;
+        order: 3;
+        flex-wrap: wrap;
+    }
+    .Video ,.Audio{
+        width: 25%;
+        margin-left: 2vw;
+        margin-top: 2vh;
+    }
+    .fashion,.food,.ListOfBooks,.sports{
+        width: 25%;
+        margin-top: 5vh;
+    }
+    .ListOfBooks{
+        order: 2;
+    }
+    .Audio{
+        order: 4;
+    }
+ 
+ }

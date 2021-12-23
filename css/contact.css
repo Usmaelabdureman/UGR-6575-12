@@ -1,0 +1,222 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: linear-gradient(blue ,#12eb5a,rgb(167, 167, 20),white);
+    margin: 0;
+    font-family:Arial, Helvetica, sans-serif;
+}
+.header{
+    margin: 0;
+    top: 0;
+    position: sticky;
+    font-family: 'Times New Roman', Times, serif;
+    box-shadow: 5px 1px 5px 0 orange;
+    text-align: center;
+    width: 100vw;
+    z-index: 10;
+    overflow: hidden;
+}
+/* Styling Navigation  */
+nav{
+    background: #031829;
+    line-height: 20px;
+    margin: 0;
+    width: 100%;
+   
+}
+/*Styling List */
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin:0 5px;
+    padding: 0;
+}
+/*Styling Navigation links with anchor tags*/
+.header nav ul a{
+    display: flex;
+    text-decoration: none;
+    padding: 10px;
+    text-transform: uppercase;
+    color: white;
+    
+}
+/* Styling navigation links when moving cursor over it*/
+.header ul li a:hover{
+    color: rgba(241, 245, 10, 0.959);
+    transition: .5s;
+
+}
+a:active{
+    color: rgba(241, 245, 10, 0.959);
+}
+.form{
+    overflow: hidden;
+    margin: 0;
+    position:relative;
+
+}
+/*Styling form */
+form{
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin:20px 10px;
+    border-radius: 8px;
+    border: 1px solid rgb(53, 52, 52);
+    border-top: 5px solid gray;
+    background-color: rgb(207, 207, 207);
+}
+/*styling header*/
+h2{
+    text-align: center;
+    font-weight: bold;
+   
+}
+h1{
+    text-align: center;
+}
+.form h1:before{
+    content: "";
+        display: block;
+        width: 30%;
+        height: 0.2rem;
+        left: 0;
+        top: 5%;
+        background: black;
+        position: absolute;
+}
+.form h1:after{
+    content: "";
+    display: block;
+    width: 30%;
+    height: 0.2rem;
+    right: 0;
+    background: black;
+    top: 5%;
+    position: absolute;
+}
+input[type=submit]{
+    margin-top: 0;
+    margin-right: 20;
+    box-shadow: 10px;
+    color: white;
+    font-size: 1.5rem;
+    position:relative;
+    background: rgba(4, 4, 250, 0.952);
+    transition: all 0.3s ease 0s;
+    margin-left: 20%;
+}
+input[type=submit]:hover{
+    color: white;
+    background-color: rgba(33, 194, 235, 0.973);
+    transition: 1s ease ;
+
+}
+input[type=checkbox]{
+    margin-left: 50px;
+}
+
+ul li {
+    list-style: none;
+    white-space: normal 20px;
+}
+
+input[type=text],input[type=email]{
+    text-align: center;
+    
+    font-size: 1em;
+    border-top-style: hidden;
+    outline: none;
+}
+
+.Mycontact,.form{
+    margin: 5% 5% 5% 5%;
+}
+.Mycontact ul li{
+    display: block;
+    padding: 20px;
+    margin-top: 10px;
+    white-space: pre-wrap;
+    padding-top: 10px;
+    margin-left: 20px;
+}
+.Mycontact ul  a{
+    text-decoration: none;
+    text-align: start;
+    color: black;
+}
+.fas{
+    color:red;
+}
+footer{
+    background-color: #0D3759;
+    position: relative;
+    width: 100%;
+}
+footer>h1{
+    text-align: center;
+    color: white;
+}
+.footer_nav{
+    color: white;
+    display: flex;
+    text-align:center;
+    width: 100vw;
+    align-items: stretch;
+    justify-content: space-around;
+    justify-items:flex-start;
+}
+.footer_nav ul li{
+    list-style: none;
+ }
+
+footer li a{
+    text-decoration: none;
+    color: #CCCCFF;
+}
+footer ul li a:hover{
+    color: rgba(241, 245, 10, 0.959);
+
+}
+footer ul li a:active{
+    color: rgba(241, 245, 10, 0.959);
+
+}
+footer ul li a:visited{
+    background-color: white;
+
+}
+
+
+@media only screen and (min-width:678px){
+    .flex-container{
+        display: flex;
+    }
+    .footer_nav{
+        display: flex;
+    }
+   .Mycontact,.form{
+       width: 50%;
+   }
+   form{
+       width: 90%;
+       height: 35vh;
+   }
+}
+@media only screen and (max-width:678px){
+    .footer_nav{
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media only screen and (max-width:390px){
+    .form h1:before{
+        display: none;
+    }
+    .form h1:after{
+        display: none;
+    }
+}

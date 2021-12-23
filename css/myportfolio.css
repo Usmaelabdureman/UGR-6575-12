@@ -1,0 +1,225 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #bbb;
+    margin: 0;
+    font-family:Arial, Helvetica, sans-serif;
+}
+.header{
+    margin: 0;
+    top: 0;
+    font-family: 'Times New Roman', Times, serif;
+    position: sticky;
+    box-shadow: 5px 1px 5px 0 orange;
+    text-align: center;
+    width: 100vw;
+}
+/* Styling Navigation  */
+nav{
+    background: #031829;
+    line-height: 20px;
+    margin: 0;
+    width: 100%;
+   
+}
+/*Styling List */
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin:0 5px;
+    padding: 0;
+}
+/*Styling Navigation links with anchor tags*/
+.header nav ul a{
+    display: flex;
+    text-decoration: none;
+    padding: 10px;
+    text-transform: uppercase;
+    color: white;
+    
+}
+
+.footer_nav{
+    color: white;
+    display: flex;
+    text-align:center;
+    width: 100vw;
+    align-items: stretch;
+    justify-content: space-around;
+    justify-items:flex-start;
+}.footer_nav ul li{
+    list-style: none;
+}
+
+/* Styling navigation links when moving cursor over it*/
+.header ul li a:hover{
+    color: rgba(241, 245, 10, 0.959);
+    transition: .5s;
+
+}
+a:active{
+    color: rgba(241, 245, 10, 0.959);
+}
+#more{
+    display: none;
+}
+button{
+    background-color: rgb(48, 6, 233);
+    margin-left: 70%;
+    color: white;
+}
+.portfolio{
+    margin-left: 5%;
+    margin-top: 0%;
+    margin-right: 5%;
+}
+.portfolio img{
+    width: 60%;
+}
+.myportfolio{
+    text-indent: 2%;
+    order: 1;
+    
+}
+.myphoto{
+    margin-top: 3%;
+    order: 2;
+    width: 100%;
+}
+.edu-bakground{
+    margin-top: 5%;
+    margin-left: 5%;
+    order: 3;
+    width:100%;
+}
+.education{
+    overflow-x: auto;
+    margin-left: 0%;
+    
+    
+}
+table{
+    width: 100%;
+    border: 2px solid darkgray;
+    border-collapse: collapse;
+
+}
+table tr{
+    height: auto;
+}
+table th{
+    background-color: #bc92d9;
+}
+table tr:hover{
+    background:#ddd;
+    cursor: pointer;
+    border: 1;
+}
+tr:nth-child(even) {background-color: #f2f2f2;}
+aside{
+    margin-left: 5%;
+    margin-top: 5%;
+}
+td:nth-child(odd){background-color:#479dcfb0;}
+aside ul {
+    margin-left: 5%;
+}
+.skill{
+    order: 4;
+}
+.services{
+    order: 5;
+}
+footer{
+    background-color: #0D3759;
+    position: relative;
+    width: 100%;
+    margin-top: 2%;
+}
+footer>h1{
+    text-align: center;
+    color: white;
+}
+.footer_nav{
+    color: white;
+    display: flex;
+    text-align:center;
+}
+footer li a{
+    text-decoration: none;
+    color: #CCCCFF;
+}
+footer ul li a:hover{
+    color: rgba(241, 245, 10, 0.959);
+
+}
+footer ul li a:active{
+    color: rgba(241, 245, 10, 0.959);
+
+}
+footer ul li a:visited{
+    background-color: white;
+
+}
+@media only screen and (max-width:325px){
+    div>img{
+        display: none;
+    }
+}
+@media only screen and (max-width:678px){
+    .portfolio{
+        font-weight:400;
+        font-size: larger;
+    }
+    .footer_nav{
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media only screen and (min-width:679px) and (max-width:992px){
+    .portfolio{
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 20px;
+    }
+    .services{
+        width: 40%;
+    }
+    
+    .skill{
+        width:40%
+    }
+    th,tr{
+        height: 50px;
+    }
+}
+@media only screen and (min-width:993px){
+    .portfolio{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .myportfolio{
+        width: 40%;
+        margin-right: 5%;
+    }
+    .myphoto{
+        width: 50%;
+        margin-right: 0;
+    
+    }
+    .edu-bakground{
+        margin-left: 0%;
+        width: 40%;
+    }
+    .services{
+        width: 25%;
+        margin-top: 10%;
+    }
+    .skill{
+        margin-top: 10%;
+        width: 25%;
+    }
+}

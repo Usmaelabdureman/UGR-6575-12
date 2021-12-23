@@ -1,0 +1,217 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #bbb;
+    margin: 0;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.header{
+    margin: 0;
+    top: 0;
+    position: sticky;
+    font-family: 'Times New Roman', Times, serif;
+    box-shadow: 5px 1px 5px 0 orange;
+    text-align: center;
+    width: 100vw;
+}
+/* Styling Navigation  */
+nav{
+    background: #031829;
+    line-height: 20px;
+    margin: 0;
+    width: 100%;
+   
+}
+/*Styling List */
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin:0 5px;
+    padding: 0;
+}
+/*Styling Navigation links with anchor tags*/
+.header nav ul a{
+    display: flex;
+    text-decoration: none;
+    padding: 10px;
+    text-transform: uppercase;
+    color: white;
+    
+}
+/* Styling navigation links when moving cursor over it*/
+.header ul li a:hover{
+    color: rgba(241, 245, 10, 0.959);
+    transition: .5s;
+
+}
+a:active{
+    color: rgba(241, 245, 10, 0.959);
+}
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 1fr;
+    grid-template-areas:
+    "plan event desc"
+    "gallery gallery gallery";
+   
+    row-gap: 0.5rem;
+    margin-left: 5%;
+    margin-right: 5%;
+    justify-items: center;
+  
+}
+.Activity{
+    grid-area: plan;
+    background-color: #8674ad;
+    margin-left: 3%;
+    margin-top: 3%;
+
+}
+.Activity ol li{
+    margin-left: 8%;
+}
+.upComing{
+    grid-area: event;
+    background: #abcdef;
+    margin-left: 3%;
+    margin-right: 2%;
+    margin-top: 3%;
+
+}
+.upComing img{
+    width: 85%;
+    margin-left: 0;
+    margin-bottom: 5%;
+    margin-right: 0;
+
+}
+.decsription{
+    margin-left: 3%;
+    margin-top: 3%;
+    grid-area: desc;
+    background: rgb(113, 236, 220);
+    margin-right: 3%;
+    box-shadow: 2px 3px 1px 3px #0bb9ee;
+
+}
+.decsription ul li{
+    margin-left: 10%;
+
+}
+.mygallery{
+    grid-area: gallery;
+    display: flex;
+    flex-wrap: wrap;
+    background-image:linear-gradient(blue,rgb(43, 20, 245),rgb(61, 196, 35),green);
+    align-items: flex-start;
+}
+.mygallery img{
+    margin-top: 3%;
+    width: 20%;
+    display: flex;
+
+}
+.g-one{
+    width: 40%;
+    height: auto;
+    order: 1;
+}
+.g-two{
+    width: 40%;
+    height: auto;
+    order: 2;
+}
+.g-three{
+    width: 40%;
+    height: auto;
+    order: 3;
+}
+.g-four{
+    width: 40%;
+    height: auto;
+    order: 4;
+}
+.g-five{
+    width: 40%;
+    height: auto;
+    order: 5;
+}
+.g-six{
+    width: 40%;
+    height: auto;
+    order: 6;
+}
+#more{
+    display: none;
+}
+button{
+    background-color: blue;
+    color: white;
+    margin-left: 70%;
+}
+figure :has(figcaption) img {
+    outline:20px dashed red;
+}
+
+footer{
+    background-color: #0D3759;
+    position: relative;
+    width: 100%;
+}
+footer>h1{
+    text-align: center;
+    color: white;
+}
+.footer_nav{
+    color: white;
+    display: flex;
+    text-align:center;
+    align-items: stretch;
+    justify-content: space-around;
+    justify-items:flex-start;
+}.footer_nav ul li{
+list-style: none;
+}
+footer li a{
+    text-decoration: none;
+    color: #CCCCFF;
+}
+footer ul li a:hover{
+    color: rgba(241, 245, 10, 0.959);
+
+}
+footer ul li a:active{
+    color: rgba(241, 245, 10, 0.959);
+
+}
+footer ul li a:visited{
+    background-color: white;
+
+}
+@media only screen and (max-width:678px){
+    .container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 0.5fr 0.6fr 0.8fr 0.4fr 1fr ;
+        grid-template-areas: 
+        "plan plan"
+        "event event"
+        "des desc"
+        "gallery gallery"
+        "gallery gallery"
+        ;
+    }
+    .footer_nav{
+        display: flex;
+        flex-direction: column;
+    
+    }
+    .mygallery{
+        display: flex;
+        flex-direction: column;
+    }
+}

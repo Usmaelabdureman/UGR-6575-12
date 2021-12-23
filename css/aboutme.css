@@ -1,0 +1,204 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image:url("Images/Wavy.jpg");
+    margin: 0;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.header{
+    margin: 0;
+    top: 0;
+    position: sticky;
+    box-shadow: 5px 1px 5px 0 orange;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    width: 100vw;
+}
+/* Styling Navigation  */
+nav{
+    background: #031829;
+    line-height: 20px;
+    margin: 0;
+    width: 100%;
+   
+}
+/*Styling List */
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin:0 5px;
+    padding: 0;
+}
+/*Styling Navigation links with anchor tags*/
+.header nav ul a{
+    display: flex;
+    text-decoration: none;
+    padding: 10px;
+    text-transform: uppercase;
+    color: white;
+    
+}
+/* Styling navigation links when moving cursor over it*/
+.header ul li a:hover{
+    color: rgba(241, 245, 10, 0.959);
+    transition: .5s;
+
+}
+a:active{
+    color: rgba(241, 245, 10, 0.959);
+}
+.Container{
+
+    display:grid;
+    grid-template-columns: .5fr 1fr 1fr;
+    grid-template-rows: 0.5fr 1fr 1fr;
+    grid-template-areas:
+    "logo description  description"
+    "main main sidebar"
+    "bio bio bio";
+    row-gap: 0.5rem;
+    margin-left: 5%;
+    margin-right: 5%;
+    
+}
+.Profile{
+    grid-area: logo;
+    background-color: #45a;
+    
+}
+.Profile img{
+    width: 100%;
+    height: auto;
+    margin-top: 3%;
+    border-radius:40%;
+}
+.description{
+    margin-top: 0;
+    grid-area: description;
+    background-color: #45a;
+
+}
+.mypersona{
+    margin-top: 8%;
+}
+.description dl{
+    margin-left: 10%;
+}
+.main-page{
+    background-image: linear-gradient(blue,rgb(0, 140, 255),green,yellow);
+    grid-area: main;
+}
+.main-page img{
+    display: inline;
+    width: 30%;
+    height: auto;
+    margin-top: 3%;
+    margin-bottom: 3%;
+
+}
+.Biography{
+    background-color: #00dddd;
+    grid-area: bio;
+
+}
+.Biography p{
+    margin-left: 3%;
+    margin-right: 3%;
+}
+h1,h2{
+    text-align: center;
+}
+.soft-skill{
+    background-color: #abcdef;
+    grid-area: sidebar;
+}
+.soft-skill p{
+    margin-left: 5%;
+    margin-right: 3%;
+}
+abbr:hover{
+    cursor: pointer;
+}
+.soft-skill ul{
+    list-style-type: style circle;
+    margin-left: 10%;
+}
+footer{
+    background-color: #0D3759;
+    position: relative;
+    width: 100%;
+}
+footer>h1{
+    text-align: center;
+    color: white;
+}
+.footer_nav{
+    color: white;
+    display: flex;
+    text-align:center;
+    width: 100vw;
+    align-items: stretch;
+    justify-content: space-around;
+    justify-items:flex-start;
+}.footer_nav ul li{
+    list-style: none;
+}
+
+.footer_nav ul li a{
+    text-decoration: none;
+    color: #CCCCFF;
+
+}
+footer ul li a:hover{
+    color: rgba(241, 245, 10, 0.959);
+
+}
+footer ul li a:active{
+    color: rgba(241, 245, 10, 0.959);
+
+}
+footer ul li a:visited{
+    background-color: white;
+
+}
+@media only screen and (max-width:678px){
+    .Container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 
+        0.4fr 0.4fr 2.5fr 1.2fr 1.5fr;
+
+        grid-template-areas:
+        "logo description"
+        "main main"
+        "bio bio"
+        "sidebar sidebar";
+        margin-left: 3%;
+        margin-right: 2%;
+    }
+}
+@media only screen and (max-width:500px){
+    .Container{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 
+        0.5fr 0.5fr 1fr 1fr 0.6fr;
+        grid-template-areas: 
+        " logo"
+        "description"
+        "main"
+        "bio"
+        "sidebar";
+       
+        row-gap: 0.2rem;
+    }
+}
+@media only screen and (max-width:400px){
+    .footer_nav{
+        display: flex;
+        flex-direction: column;
+    }
+}

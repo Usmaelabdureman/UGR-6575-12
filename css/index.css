@@ -1,0 +1,209 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: linear-gradient(blue,rgb(65, 216, 19),green,violet,purple);
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+.header{
+    margin: 0;
+    top: 0;
+    position: fixed;
+    box-shadow: 5px 1px 5px 0 orange;
+    text-align: center;
+    width: 100vw;
+}
+/* Styling Navigation  */
+nav{
+    background: #031829;
+    line-height: 20px;
+    margin: 0;
+    width: 100%;
+   
+}
+/*Styling List */
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin:0 5px;
+    padding: 0;
+}
+/*Styling Navigation links with anchor tags*/
+.header nav ul a{
+    display: flex;
+    text-decoration: none;
+    padding: 10px;
+    text-transform: uppercase;
+    color: white;
+    
+}
+/* Styling navigation links when moving cursor over it*/
+.header ul li a:hover{
+    color: rgba(241, 245, 10, 0.959);
+    transition: .5s;
+
+}
+a:active{
+    color: rgba(241, 245, 10, 0.959);
+}
+/*Styling container */
+.container{
+    display: flex;
+    flex: 0 1 33.33%;
+    box-sizing: border-box;
+    margin-left: 3%;
+    margin-top: 3%;
+}
+.profile-photo{
+    margin-top: 3%;
+
+order:1;
+width: 20%;
+}
+.profile-photo img{
+    width: 50%;
+    border-radius: 50%;
+}
+.pro-name h1{
+    text-indent: 5%;
+}
+.welcoming{
+    order:2;
+    width: 100%;
+    margin-top: 3%;
+
+}
+.main{
+    order: 3;
+    width: 100%;
+    margin-top: 3%;
+
+}
+.main img{
+    width: 95%;
+}
+.main .overlay figcaption{
+    position:relative;
+    font-weight: 700;
+    bottom: 0;
+    left: 15%;
+
+}
+.description{
+    order: 4;
+    width: 100%;
+    margin-top: 3%;
+}
+.sidebar{
+    order: 5;
+    border: 2px solid gray;
+    background-color: #798;
+    box-shadow: 3px 3px orange;
+}
+footer{
+    order: 6;
+    width: 100%;
+    margin-top: 5%;
+}
+footer{
+    background-color: #0D3759;
+    
+    position: relative;
+    width: 100vw;
+    margin-bottom: 0;
+}
+footer>h1{
+    text-align: center;
+    color: white;
+}
+.footer_nav{
+    color: white;
+    display: flex;
+    text-align:center;
+    align-items: stretch;
+    justify-content: space-around;
+    justify-items:flex-start;
+
+}
+.footer_nav ul li {
+    list-style: none;
+    color: #CCCCFF;
+}
+.footer_nav ul li a{
+    text-decoration: none;
+    color: #ccccff;
+}
+footer ul li a:hover{
+    color: rgba(241, 245, 10, 0.959);
+
+}
+footer ul li a:active{
+    color: rgba(241, 245, 10, 0.959);
+
+}
+footer ul li a:visited{
+    background-color: white;
+
+}
+
+
+@media only screen and (min-width:678px){
+    .container{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    .profile-photo{
+        width: 35%;
+        height: auto;
+    }
+    .welcoming{
+        width: 15%;
+    }
+    .description{
+        width: 40%;
+        order: 3;
+        margin-left: 5%;
+    }
+    .main{
+        width: 100%;
+        order: 4;
+    }
+    .sidebar{
+        width: 40%;
+        margin-right: 5%;
+        margin-top: 3%;
+        
+    }
+    
+}
+@media only screen and (max-width:677px){
+    .container{
+        display: flex;
+        flex-direction: column;
+        margin-top: 5px;
+    }
+    .profile-photo{
+        width: 100%;
+    }
+    .sidebar{
+        display: none;
+        margin-top: 5%;
+    }
+    .main .overlay figcaption{
+        position:absolute;
+        font-weight: 700;
+        bottom: 0;
+        left: 15%;
+    
+    }
+}
+@media only screen and (max-width:400px){
+    .footer_nav{
+        display: flex;
+        flex-direction: column;
+    }
+}

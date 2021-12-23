@@ -10,7 +10,7 @@ body{
 .header{
     margin: 0;
     top: 0;
-    position: fixed;
+    position: sticky;
     box-shadow: 5px 1px 5px 0 orange;
     text-align: center;
     width: 100vw;
@@ -51,7 +51,6 @@ a:active{
 /*Styling container */
 .container{
     display: flex;
-    flex: 0 1 33.33%;
     box-sizing: border-box;
     margin-left: 3%;
     margin-top: 3%;
@@ -61,6 +60,7 @@ a:active{
 
 order:1;
 width: 20%;
+
 }
 .profile-photo img{
     width: 50%;
@@ -184,10 +184,11 @@ footer ul li a:visited{
     .container{
         display: flex;
         flex-direction: column;
-        margin-top: 5px;
+        margin-top: 10%;
     }
     .profile-photo{
         width: 100%;
+        margin-top: 3%;
     }
     .sidebar{
         display: none;
@@ -206,4 +207,5 @@ footer ul li a:visited{
         display: flex;
         flex-direction: column;
     }
+
 }

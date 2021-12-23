@@ -12,10 +12,12 @@ body{
     margin: 0;
     top: 0;
     position: sticky;
-    box-shadow: 5px 1px 5px 0 orange;
     font-family: 'Times New Roman', Times, serif;
+    box-shadow: 5px 1px 5px 0 orange;
     text-align: center;
     width: 100vw;
+    overflow: hidden;
+    z-index: 20;
 }
 /* Styling Navigation  */
 nav{
@@ -81,6 +83,7 @@ a:active{
 }
 .myFavorites{
     display: flex;
+    
 }
 .Video{
     box-shadow: 2px 2px 2px 2px #1e3;
@@ -167,6 +170,10 @@ footer ul li a:visited{
 
 @media only screen and (max-width:678px){
     .myFavorites{
+        display: flex;
+        flex-direction: column;
+    }
+    .footer_nav{
         display: flex;
         flex-direction: column;
     }

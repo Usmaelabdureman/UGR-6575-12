@@ -111,8 +111,10 @@ a:active{
 }
 .mygallery img{
     margin-top: 3%;
-    width: 20%;
+    max-width: 30%;
     display: flex;
+    margin-left: 5%;
+    margin-right: 0;
 
 }
 .g-one{
@@ -195,14 +197,14 @@ footer ul li a:visited{
 @media only screen and (max-width:678px){
     .container{
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
         grid-template-rows: 0.5fr 0.6fr 0.8fr 0.4fr 1fr ;
         grid-template-areas: 
-        "plan plan"
-        "event event"
-        "des desc"
-        "gallery gallery"
-        "gallery gallery"
+        "plan "
+        "event "
+        "desc "
+        "gallery "
+        "gallery "
         ;
     }
     .footer_nav{
@@ -212,6 +214,15 @@ footer ul li a:visited{
     }
     .mygallery{
         display: flex;
-        flex-direction: column;
+        max-width: 100%;
+
+    }
+    .mygallery img{
+        max-width: 100%;
+    }
+    .decsription{
+        align-items: center;
+
+       
     }
 }
